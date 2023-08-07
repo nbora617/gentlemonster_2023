@@ -6,3 +6,9 @@
         width:auto; height:100%;
     }
 }/* 1500 end */
+@media screen and (max-width:1000px){
+    /* 1000px 이하일 때 */
+    header .right .lang {display:none;}
+    header .right #searchFrm fieldset {width:350px;}
+}/* 1000end */
+@media screen and (max-width:800px){}
