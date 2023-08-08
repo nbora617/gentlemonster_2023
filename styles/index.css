@@ -60,7 +60,7 @@ main .adver_bnr .txt h1 {
 }
 main .adver_bnr .txt .link {}
 main .adver_bnr .txt .link a {
-    width:150px; padding:5px 10px; background:#222;
+    width:150px; padding:10px; background:#222;
     font-size:1.333rem; letter-spacing:-0.02em;
     color:#fff; text-align:center;
     display:inline-block; margin-right:10px;  
