@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>LOGIN | GENTLEMONSTER</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    <!-- header -->
+    <main>
+        <h1>로그인</h1>
+        <button id="close" type="button"><img src="./images/login_close.png" alt="닫기"></button>
+        <div class="wrap">
+            <h2>반갑습니다.<br><em>JENTLE MONSTER</em>입니다.</h2>
+            <form action="#" method="get" id="loginFrm">
+                <fieldset>
+                    <legend class="skip">로그인 양식</legend>
+                    <div class="id">
+                        <input type="text" id="email" placeholder="이메일 입력">
+                        <button type="reset" class="reset"><img src="./images/form_reset.png" alt=""></button>
+                    </div>
+                    <div class="pw">
+                        <input type="password" id="pw" placeholder="비밀번호 입력">
+                        <button type="reset" class="reset"><img src="./images/form_reset.png" alt=""></button>
+                    </div>
+                    <label for="save">
+                        <input type="checkbox" id="save"><span>아이디 저장</span>
+                    </label>
+                    <button type="submit" id="login">로그인</button>
+                </fieldset>
+            </form>
+            <div class="login_menu">
+                <a href="#">아이디 찾기</a>
+                <a href="#">비밀번호 찾기</a>
+                <a href="#">비회원 주문/조회</a>
+            </div>
+            <div class="web_login">
+                <a href="#">
+                    <img src="./images/kakao.png" alt="">
+                    <span>카카오<br>로그인</span>
+                </a>
+                <a href="#">
+                    <img src="./images/naver.png" alt="">
+                    <span>네이버<br>로그인</span>
+                </a>
+                <a href="#">
+                    <img src="./images/google.png" alt="">
+                    <span>구글<br>로그인</span>
+                </a>
+                <a href="#">
+                    <img src="./images/apple.png" alt="">
+                    <span>애플<br>로그인</span>
+                </a>
+            </div>
+            <a href="#" class="membership">
+                <p>아직 회원이 아니세요?</p>
+                <p>회원가입></p>
+            </a>
+        </div>
+    </main>
+    <!-- footer -->
+    <script src="./script/login.js"></script>
+</body>
+</html>
