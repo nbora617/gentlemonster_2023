@@ -49,7 +49,6 @@ main .adver_bnr .txt {
     /* contents width px */
     max-width:1200px; margin:0 auto;
     padding:75px 0;
-    background:palegoldenrod;
 }
 main .adver_bnr .txt p {
     font-size:1.777rem; letter-spacing:-0.02em;
@@ -115,7 +114,7 @@ main #shop_service {
     background-position:left center;
     background-size:80%;
     padding-top:87px; /* padding-left:640px; */
-    margin-top:103px;
+    margin-top:103px; margin-bottom:300px;
     display:flex; flex-flow:row-reverse;
 }
 main #shop_service .txt {

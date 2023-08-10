@@ -1,11 +1,12 @@
 /* main */
+/* 로그인 타이틀 영역 */
 main {
     text-align:center; margin:0 auto;
     position:relative;
 }
 main h1 {
     font-size:1.333rem; font-weight:700;
-    padding:20px; border-bottom:1px solid #f1f1f1;
+    padding:20px; border:1px solid #f1f1f1; border-left:none; border-right:none;
     margin-bottom:30px;
 }
 main #close {
@@ -16,99 +17,100 @@ main #close:hover {
     background:url(../images/close_hover.png) no-repeat;
     transform:scale(1.1);
 }
-main .wrap {max-width:800px; margin:0 auto;}
-main h2 {
+/* 로그인 내용 영역 */
+main .wrap {max-width:700px; margin:0 auto; margin-bottom:1000px;}
+main .wrap h2 {
     font-size:1.333rem; font-weight:700; 
     letter-spacing:-0.02rem; line-height:30px;
     margin-bottom:50px;
 }
-main h2 em {
+main .wrap h2 em {
     font-size:1.333rem; font-weight:700; color:#BB2649; 
     word-spacing:-0.04rem; 
 }
-main #loginFrm {}
-main #loginFrm fieldset {
+main .wrap #loginFrm {}
+main .wrap #loginFrm fieldset {
     width:60%; margin:0 auto;
     display:flex; flex-flow:column nowrap; align-items:center;
 }
 /* 로그인 공통디자인 영역 */
-main #loginFrm fieldset .id,
-main #loginFrm fieldset .pw {
+main .wrap #loginFrm fieldset .id,
+main .wrap #loginFrm fieldset .pw {
     width:100%; padding:10px 20px; 
     display:flex; flex-flow:row nowrap; 
     justify-content:space-between; align-items:center;
     border:1px solid #aaa; border-radius:10px;;
 }
-main #loginFrm fieldset .id #email, 
-main #loginFrm fieldset .pw #pw {
+main .wrap #loginFrm fieldset .id #email, 
+main .wrap #loginFrm fieldset .pw #pw {
     width:calc(100% - 20px); background:none;
 }
-main #loginFrm fieldset .id .reset,
-main #loginFrm fieldset .pw .reset {
+main .wrap #loginFrm fieldset .id .reset,
+main .wrap #loginFrm fieldset .pw .reset {
     width:20px; height:20px; background:none;
 }
-main #loginFrm fieldset .id .reset img,
-main #loginFrm fieldset .pw .reset img {width:100%}
+main .wrap #loginFrm fieldset .id .reset img,
+main .wrap #loginFrm fieldset .pw .reset img {width:70%}
 
 /* 로그인 개별디자인 */
-main #loginFrm fieldset .id {margin-bottom:10px;}
-main #loginFrm fieldset .id #email {}
-main #loginFrm fieldset .id .reset {}
-main #loginFrm fieldset .id .reset img {}
-main #loginFrm fieldset .pw {margin-bottom:20px;}
-main #loginFrm fieldset .pw #pw {}
-main #loginFrm fieldset .pw .reset {}
-main #loginFrm fieldset .pw .reset img {}
-main #loginFrm fieldset label {align-self:flex-start; margin-bottom:20px;}
-main #loginFrm fieldset label #save {appearance:none;}
-main #loginFrm fieldset label span {
+main .wrap #loginFrm fieldset .id {margin-bottom:10px;}
+main .wrap #loginFrm fieldset .id #email {}
+main .wrap #loginFrm fieldset .id .reset {}
+main .wrap #loginFrm fieldset .id .reset img {}
+main .wrap #loginFrm fieldset .pw {margin-bottom:20px;}
+main .wrap #loginFrm fieldset .pw #pw {}
+main .wrap #loginFrm fieldset .pw .reset {}
+main .wrap #loginFrm fieldset .pw .reset img {}
+main .wrap #loginFrm fieldset label {align-self:flex-start; margin-bottom:20px;}
+main .wrap #loginFrm fieldset label #save {appearance:none;}
+main .wrap #loginFrm fieldset label span {
     background:url(../images/unchecked.png) no-repeat;
     background-position-y:center;
     background-size:15%;
-    padding-left:20px;
+    padding-left:25px;
 }
-main #loginFrm fieldset label input:checked+span {
+main .wrap #loginFrm fieldset label input:checked+span {
     background:url(../images/checked.png) no-repeat; 
     background-position-y:center;
     background-size:15%;
 }
-main #loginFrm fieldset #login {
+main .wrap #loginFrm fieldset #login {
     width:100%; padding:10px 20px;
     line-height:25px;
     background:#f1f1f1; margin-bottom:50px;
     border-radius:10px;;
 }
-main .login_menu {width:100%; margin-bottom:50px;}
-main .login_menu a {
+main .wrap .login_menu {width:100%; margin-bottom:50px;}
+main .wrap .login_menu a {
     padding:10px; margin-right:20px; 
-    letter-spacing:-0.02rem;
-
+    letter-spacing:-0.04rem;
 }
-main .login_menu a::after {
+main .wrap .login_menu a:last-child {margin-right:0;}
+main .wrap .login_menu a::after {
     content:''; display:inline-block;
     width:1px; height:14px; background:#222;
-    margin:5px -15px 0 30px;
+    margin:0 -25px 0 20px;
 }
-main .login_menu a:last-child::after {display:none;}
-main .web_login {
+main .wrap .login_menu a:last-child::after {display:none;}
+main .wrap .web_login {
     max-width:500px; margin:0 auto;
     padding:0 75px;
     margin-bottom:50px;
 }
-main .web_login a {
+main .wrap .web_login a {
     width:calc(25% - 40px);
-    background-color: #BB2649;
     display:inline-block;
     margin-right:40px;
 }
-main .web_login a:last-child {margin-right:0;}
-main .web_login a img {width:100%; margin-bottom:5px;}
-main .web_login a span {
-    letter-spacing:-0.02rem; line-height:20px;
+main .wrap .web_login a:last-child {margin-right:0;}
+main .wrap .web_login a img {width:100%; margin-bottom:5px;}
+main .wrap .web_login a span {
+    font-size: 0.875rem; letter-spacing:-0.02rem; line-height:20px;
 }
-main .membership {
+main .wrap .membership {
     width:60%; margin:0 auto; padding:10px 20px;
     display:flex; flex-flow:row nowrap; justify-content:space-between;
     border:1px solid #aaa; border-radius:10px;;
 }
-main .membership p {font-weight:700; line-height:25px; letter-spacing:-0.02rem;}
+main .wrap .membership p {font-weight:700; line-height:25px; letter-spacing:-0.02rem;}
+main .wrap .membership p:first-child {font-size: 0.875rem; font-weight:500;}

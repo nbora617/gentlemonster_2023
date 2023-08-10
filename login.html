@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>LOGIN | GENTLEMONSTER</title>
+    <title>LOGIN | GENTLE MONSTER</title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/login.css">
+    <!-- header 관련링크 -->
+    <!-- swiper -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- 외부스타일시트 -->
+    <link rel="stylesheet" href="./styles/common.css">
 </head>
 <body>
     <!-- header -->
+    <?php include('./header.php') ?>
     <main>
         <h1>로그인</h1>
-        <button id="close" type="button"><img src="./images/login_close.png" alt="닫기"></button>
         <div class="wrap">
             <h2>반갑습니다.<br><em>JENTLE MONSTER</em>입니다.</h2>
             <form action="#" method="get" id="loginFrm">
@@ -64,6 +70,8 @@
         </div>
     </main>
     <!-- footer -->
-    <script src="./script/login.js"></script>
+    <?php include('./footer.php') ?>
+    <!-- //header, footer 웹페이지 공통영역 적용js -->
+    <script src="./script/common.js"></script>
 </body>
 </html>
