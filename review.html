@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰게시판 | 젠틀몬스터</title>
+    <!-- header 관련링크 -->
+    <!-- swiper -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- 외부스타일시트 -->
+    <link rel="stylesheet" href="./styles/common.css">
+    <style>
+        main {text-align:center;}
+        iframe {
+            width:90%; height:500px;
+            margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <?php include("./header.php") ?>
+    <main>
+        <!-- 외부 웹주소(게시판,지도 등)를 내부 HTML로 삽입하는 방법 -->
+        <!-- scrolling="no" == 리뷰게시판 내에 스크롤바 제거 -->
+        <iframe src="http://nbora617.pe.kr/gnuboard5/bbs/board.php?bo_table=gentle_review" frameborder="0" scrolling="no"></iframe>
+    </main>
+    <!-- footer -->
+    <?php include("./header.php") ?>
+    <!-- //header, footer 웹페이지 공통영역 적용js -->
+    <script src="./script/common.js"></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 <footer>
+    <section class="f_container">
         <div class="f_menu">
             <dl class="service">
                 <dt>고객서비스</dt>
@@ -41,4 +42,5 @@
                 고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. <a href="#">서비스 가입사실 확인</a>
             </address>
         </div>
-    </footer>
+    </section>
+</footer>

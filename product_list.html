@@ -6,6 +6,9 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>안경 | GENTLE MONSTER</title>
+    <!-- swiper -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- 글꼴 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +22,47 @@
     <!-- header.php -->
     <main>
         <!-- 1. swiper-slide -->
+        <div class="swiper" id="product_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                    <div class="txt">
+                        <h1><em>캐쥬얼&댄디한</em><br>분위기 연출,</h1>
+                        <p>GENTLE MONSTER</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide2">
+                    <div class="txt">
+                        <h1><em>캐쥬얼&댄디한</em><br>분위기 연출,</h1>
+                        <p>GENTLE MONSTER</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide3">
+                    <div class="txt">
+                        <h1><em>캐쥬얼&댄디한</em><br>분위기 연출,</h1>
+                        <p>GENTLE MONSTER</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide4">
+                    <div class="txt">
+                        <h1><em>캐쥬얼&댄디한</em><br>분위기 연출,</h1>
+                        <p>GENTLE MONSTER</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide5">
+                    <div class="txt">
+                        <h1><em>캐쥬얼&댄디한</em><br>분위기 연출,</h1>
+                        <p>GENTLE MONSTER</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slide6">
+                    <div class="txt">
+                        <h1><em>캐쥬얼&댄디한</em><br>분위기 연출,</h1>
+                        <p>GENTLE MONSTER</p>
+                    </div>
+                </div>
+            </div><!-- end:swiper-wrapper -->
+            <div class="swiper-scrollbar"></div>
+        </div>
         <!-- 2.category -->
         <div id="category">
             <a href="#">
@@ -93,7 +137,7 @@
                 </div>
                 <div class="item item2">
                     <div class="img">
-                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_06.jpg" alt=""></a>
+                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_11.jpg" alt=""></a>
                         <a href="#" class="like_img"><img src="./images/glasses_img/Like.png" alt="관심상품 달기"></a>
                     </div>
                     <div class="txt">
@@ -109,7 +153,7 @@
                 </div>
                 <div class="item item3">
                     <div class="img">
-                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_06.jpg" alt=""></a>
+                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_08.jpg" alt=""></a>
                         <a href="#" class="like_img"><img src="./images/glasses_img/Like.png" alt="관심상품 달기"></a>
                     </div>
                     <div class="txt">
@@ -125,7 +169,7 @@
                 </div>
                 <div class="item item4">
                     <div class="img">
-                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_06.jpg" alt=""></a>
+                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_01.jpg" alt=""></a>
                         <a href="#" class="like_img"><img src="./images/glasses_img/Like.png" alt="관심상품 달기"></a>
                     </div>
                     <div class="txt">
@@ -141,7 +185,7 @@
                 </div>
                 <div class="item item5">
                     <div class="img">
-                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_06.jpg" alt=""></a>
+                        <a href="#" class="item_img"><img src="./images/glasses_img/glasses_07.jpg" alt=""></a>
                         <a href="#" class="like_img"><img src="./images/glasses_img/Like.png" alt="관심상품 달기"></a>
                     </div>
                     <div class="txt">
@@ -159,5 +203,40 @@
         </div>
     </main>
     <!-- footer.php -->
+    <script>
+        //특정 페이지만 해당하는 JS동작기능은 내부스크립트로 작성한다.
+        //product_slide 기능은 product_list.html에만 존재한다.(내부)
+        //header swiper기능은 header가 모든 페이지에 존재하기 때문에 외부에 작성한다.
+        const product_slide = new Swiper('#product_slide',{
+            slidesPerView:1, //한번에 보이는 슬라이드 갯수
+            centeredSlides:true, //슬라이드 기준이 중심부터 시작설정
+            loop:true, //무한반복 설정
+            autoplay:{delay:2000}, //자동재생
+            speed:800, //슬라이드 전환 시 부드러운 전환
+            scrollbar:{el:'#product_slide .swiper-scrollbar'}, //스크롤바 표시
+            on:{ //슬라이드의 글자가 나타나고 사라지는 기능
+                init:function(){
+                    //슬라이드 변경되기 전 초기 실행함수
+                    this.slides[this.activeIndex].querySelector('.txt').style.opacity = '1';
+                },
+                slideChange:function(){
+                    //슬라이드 변경될 때 인식되는 실행함수
+                    //1. 활성화 전 모든 슬라이드 opacity:0\
+                    this.slides.forEach(target => {
+                        target.querySelector('.txt').style.opacity = '0';
+                        target.querySelector('.txt').style.transform = 'translateX(30px)';
+                        
+                    })
+                    //2. 활성화 슬라이드만 opacity:1
+                    this.slides[this.activeIndex].querySelector('.txt').style.opacity = '1';
+                    this.slides[this.activeIndex].querySelector('.txt').style.transform = 'translateX(0)';
+                }
+            },
+            breakpoints:{
+                700:{slidesPerView:2, centeredSlides:false,},
+                1000:{slidesPerView:3, centeredSlides:true,}
+            },
+        })
+    </script>
 </body>
 </html>
