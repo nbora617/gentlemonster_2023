@@ -137,7 +137,9 @@ footer .f_container .f_menu .sns dd {}
 footer .f_container .f_menu .sns dd a {}
 /* footer - f_copy */
 footer .f_container .f_copy {display:flex; flex-flow:row nowrap; justify-content:space-between;}
-footer .f_container .f_copy .logo {width:213px; height:40px; padding-right:50px; margin-top:10px;}
+footer .f_container .f_copy .logo {width:213px; height:40px; margin-top:10px;}
 footer .f_container .f_copy .logo img {width:100%;}
-footer .f_container .f_copy address {width:80%; line-height:30px; letter-spacing:-0.02rem;}
+footer .f_container .f_copy address {
+    width:80%; line-height:30px; letter-spacing:-0.02rem;
+}
 footer .f_container .f_copy address a {text-decoration-line:underline;}
